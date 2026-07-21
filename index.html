@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>LUMIE JEWELS | Fine Indian Jewelry Store </title>
+  <meta name="description" content="Explore LUMIE JEWELS, a luxury Indian fine jewelry storefront showcasing exquisite 22KT gold necklaces, Rivaah bridal collections, Mia everyday diamond pieces, and Virasat antique gold.">
+  <meta name="keywords" content="jewelry, indian jewelry, gold jewelry, diamond rings, rani haar, jhumka, bridal collection, rivaah, mia, virasat, gold coins">
+  <meta name="author" content="Lumie Jewels">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/gold_category.jpg">
+
+  <!-- Icons - FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Central Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- 1. Top Utility Bar -->
+  <div class="top-utility-bar">
+    <div class="container top-bar-container">
+      <div class="top-bar-left">
+        <span class="top-bar-item"><i class="fas fa-gem"></i> 100% Certified Diamonds</span>
+        <span class="top-bar-item"><i class="fas fa-check-circle"></i> BIS Hallmarked Gold</span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-item"><i class="fas fa-phone-alt"></i> Toll-Free Concierge: 1800 123 456</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Header & Navigation -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <div class="nav-brand">
+        <a href="#" class="nav-logo">LUMIE <span>JEWELS</span></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#" class="active-nav">Home</a></li>
+        <li><a href="#showcase-section">Occasions</a></li>
+        <li><a href="#featured-section">Featured</a></li>
+        <li><a href="#shop-section">Catalog</a></li>
+        <li><a href="tel:+911800123456" style="color: var(--color-gold); font-weight: 700;"><i class="fas fa-phone-alt"></i> Concierge</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 3. Hero Section -->
+  <section class="hero">
+    <div class="hero-video-container">
+      <video id="hero-video" autoplay loop muted playsinline poster="assets/images/hero_fallback.jpg">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-glowing-gold-particles-loop-background-42345-large.mp4" type="video/mp4">
+      </video>
+      <img id="hero-fallback-bg" class="hero-fallback" src="assets/images/hero_fallback.jpg" alt="Lumie Jewels Fallback Banner">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content intersect">
+        <span class="hero-subtitle">The Promise of Purity</span>
+        <h1 class="hero-title" id="hero-title" data-text="Intricate Heritage, Modern Luxury"></h1>
+        <p class="hero-tagline">Explore exquisite Indian jewelry handcrafted by master karigars. Featuring hallmarked gold wedding pieces and certified diamond designs.</p>
+        <a href="#shop-section" class="btn-outline" style="margin-top: 10px;">Explore Catalog</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Sub-Brands Showcase Section (Rivaah/Mia) -->
+  <section class="showcase-section" id="showcase-section">
+    <div class="container">
+      <div class="section-header intersect">
+        <span class="section-subtitle">Exquisite Segments</span>
+        <h2 class="section-title">Shop by Sub-Brand & Occasion</h2>
+      </div>
+      
+      <div class="showcase-grid">
+        <!-- Rivaah (Bridal) -->
+        <div class="showcase-card intersect" data-brand="Rivaah" onclick="selectSubBrand('Rivaah')" style="--delay: 0ms">
+          <div class="showcase-img-wrapper">
+            <img src="assets/images/gold_category.jpg" alt="Rivaah Bridal Wedding Collection" onerror="this.src='assets/images/hero_fallback.jpg'">
+          </div>
+          <div class="showcase-info">
+            <h3 class="showcase-logo">RIVAAH</h3>
+            <p class="showcase-desc">Grand jewelry curated for wedding ceremonies, bride essentials, and classic heritage look.</p>
+            <span class="btn-text">Browse Bridal Collection</span>
+          </div>
+        </div>
+
+        <!-- Mia (Lightweight Everyday) -->
+        <div class="showcase-card intersect" data-brand="Mia" onclick="selectSubBrand('Mia')" style="--delay: 50ms">
+          <div class="showcase-img-wrapper">
+            <img src="assets/images/diamond_category.jpg" alt="Mia Daily Wear Collection" onerror="this.src='assets/images/hero_fallback.jpg'">
+          </div>
+          <div class="showcase-info">
+            <h3 class="showcase-logo">MIA</h3>
+            <p class="showcase-desc">Minimalist, sleek 18KT gold and diamond pieces crafted for work, casualwear, and modern styling.</p>
+            <span class="btn-text">Browse Daily Wear</span>
+          </div>
+        </div>
+
+        <!-- Astra (Diamonds) -->
+        <div class="showcase-card intersect" data-brand="Astra" onclick="selectSubBrand('Astra')" style="--delay: 100ms">
+          <div class="showcase-img-wrapper">
+            <img src="assets/images/diamond_category.jpg" alt="Astra Diamond Collection" onerror="this.src='assets/images/hero_fallback.jpg'">
+          </div>
+          <div class="showcase-info">
+            <h3 class="showcase-logo">ASTRA</h3>
+            <p class="showcase-desc">Sparkling statement rings, necklaces, and bangles featuring high-clarity certified diamonds.</p>
+            <span class="btn-text">Browse Diamonds</span>
+          </div>
+        </div>
+
+        <!-- Virasat (Traditional Heritage) -->
+        <div class="showcase-card intersect" data-brand="Virasat" onclick="selectSubBrand('Virasat')" style="--delay: 150ms">
+          <div class="showcase-img-wrapper">
+            <img src="assets/images/gemstone_category.jpg" alt="Virasat Antique Collection" onerror="this.src='assets/images/hero_fallback.jpg'">
+          </div>
+          <div class="showcase-info">
+            <h3 class="showcase-logo">VIRASAT</h3>
+            <p class="showcase-desc">Timeless 22KT gold filigree, auspicious coins, and traditional gemstone masterpieces.</p>
+            <span class="btn-text">Browse Traditional</span>
+          </div>
+        </div>
+
+        <!-- Virasat Oxidised (Newly Launched) -->
+        <div class="showcase-card intersect" data-brand="Virasat Oxidised" onclick="selectSubBrand('Virasat Oxidised')" style="--delay: 200ms">
+          <div class="showcase-img-wrapper">
+            <img src="assets/images/gemstone_category.jpg" alt="Virasat Oxidised Silver Collection" onerror="this.src='assets/images/hero_fallback.jpg'">
+            <span class="product-card-tag" style="top: 10px; left: 10px; bottom: auto; background-color: var(--color-gold); color: #131827;">NEW LAUNCH</span>
+          </div>
+          <div class="showcase-info">
+            <h3 class="showcase-logo">VIRASAT OXIDISED</h3>
+            <p class="showcase-desc">Handcrafted 925 sterling silver Oxidised Jhumkas, temple Haslis & tribal Kadas with antique patina.</p>
+            <span class="btn-text">Explore Oxidised Silver <i class="fas fa-chevron-right"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Main Categories Section -->
+  <section class="categories-section" id="categories-section">
+    <div class="container">
+      <div class="section-header intersect">
+        <span class="section-subtitle">Collections</span>
+        <h2 class="section-title">Shop by Category</h2>
+      </div>
+      <!-- Category cards rendered dynamically from app.js -->
+      <div class="categories-track" id="categories-container"></div>
+    </div>
+  </section>
+
+  <!-- 6. Featured Items Section -->
+  <section class="featured-section" id="featured-section">
+    <div class="container">
+      <div class="section-header intersect">
+        <span class="section-subtitle">Fine Masterpieces</span>
+        <h2 class="section-title">Featured Pieces</h2>
+      </div>
+      <!-- Featured cards rendered dynamically from app.js -->
+      <div class="featured-grid" id="featured-grid"></div>
+    </div>
+  </section>
+
+  <!-- 7. Shop Search and Filter Section -->
+  <section class="shop-section" id="shop-section">
+    <div class="container">
+      <div class="section-header intersect">
+        <span class="section-subtitle">Fine Catalog</span>
+        <h2 class="section-title">Browse Jewelry Catalog</h2>
+      </div>
+
+      <!-- Controls Panel -->
+      <div class="shop-controls-bar intersect">
+        
+        <!-- Search input -->
+        <div class="search-container">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" id="search-input" class="search-input" placeholder="Search by name, sub-brand, type, material, or Indian terminology (e.g. Haar, Kada, Rivaah, Mia)...">
+        </div>
+
+        <!-- Filter Dropdowns -->
+        <div class="filter-dropdowns">
+          <!-- Sub-Brand Filter -->
+          <div class="filter-group">
+            <label for="filter-sub-brand" class="filter-label">Occasion / Brand</label>
+            <select id="filter-sub-brand" class="filter-select">
+              <option value="All">All Sub-Brands</option>
+              <option value="Rivaah">Rivaah (Bridal)</option>
+              <option value="Mia">Mia (Everyday)</option>
+              <option value="Astra">Astra (Diamonds)</option>
+              <option value="Virasat">Virasat (Traditional)</option>
+            </select>
+          </div>
+
+          <!-- Sub-category Filter -->
+          <div class="filter-group">
+            <label for="filter-sub-category" class="filter-label">Product Type</label>
+            <select id="filter-sub-category" class="filter-select">
+              <option value="All">All Types</option>
+            </select>
+          </div>
+
+          <!-- Material Filter -->
+          <div class="filter-group">
+            <label for="filter-material" class="filter-label">Material & Purity</label>
+            <select id="filter-material" class="filter-select">
+              <option value="All">All Metals</option>
+            </select>
+          </div>
+
+          <!-- Collection Tag Filter -->
+          <div class="filter-group">
+            <label for="filter-collection" class="filter-label">Design Line</label>
+            <select id="filter-collection" class="filter-select">
+              <option value="All">All Styles</option>
+            </select>
+          </div>
+          
+          <!-- Results Counter -->
+          <div class="filter-group" style="justify-content: flex-end;">
+            <div id="results-count" class="results-count" style="margin-bottom: 12px; font-weight: 600; font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--color-burgundy);">Showing 0 pieces</div>
+          </div>
+        </div>
+
+        <!-- Active Filter Badges -->
+        <div class="active-filters-container">
+          <div class="active-filter-chips" id="active-filter-chips">
+            <!-- Chips rendered dynamically -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Item Grid Display Section -->
+      <div class="products-grid" id="products-grid">
+        <!-- Products cards rendered dynamically from app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-layout">
+        <div class="footer-brand">
+          <h2>LUMIE JEWELS</h2>
+          <p>LUMIE JEWELS stands for purity, heritage, and modern luxury. Every piece is handcrafted by master karigars and backed by strict hallmarking standards to give you complete trust and transparency.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Sub-Brands</h3>
+          <ul>
+            <li><a href="#" onclick="selectSubBrand('Rivaah')">Rivaah Bridal Wear</a></li>
+            <li><a href="#" onclick="selectSubBrand('Mia')">Mia Everyday Jewelry</a></li>
+            <li><a href="#" onclick="selectSubBrand('Astra')">Astra Diamond Rings</a></li>
+            <li><a href="#" onclick="selectSubBrand('Virasat')">Virasat Heritage Gold</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>Customer Concierge</h3>
+          <div class="footer-info">
+            <div class="footer-info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Mumbai Flagship Salon, Maharashtra, India</span>
+            </div>
+            <div class="footer-info-item">
+              <i class="fas fa-phone-alt"></i>
+              <span>+91 1800 123 456 (Toll Free)</span>
+            </div>
+            <div class="footer-info-item">
+              <i class="fas fa-envelope"></i>
+              <span>concierge@lumiejewels.in</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 LUMIE JEWELS. All rights reserved. Made for luxury jewelry exploration.</p>
+        <div class="footer-values">
+          <span>100% Purity Guarantee</span> &bull; <span>BIS Hallmarked Gold</span> &bull; <span>Certified Diamonds</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 9. Item Detail Modal (Lightbox Overlay) -->
+  <div id="product-detail-modal" class="product-detail-modal" onclick="if(event.target === this) closeDetailModal()">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="closeDetailModal()" aria-label="Close modal">
+        <i class="fas fa-times"></i>
+      </button>
+      <div id="modal-detail-content">
+        <!-- Rendered dynamically from app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Core Javascript Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
