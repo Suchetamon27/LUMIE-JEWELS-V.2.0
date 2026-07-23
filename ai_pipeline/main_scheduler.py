@@ -15,10 +15,10 @@ if hasattr(sys.stdout, 'reconfigure'):
 sys.path.append(str(Path(__file__).resolve().parent))
 
 from config import WEBSITE_URL, DAILY_SCHEDULE_TIME
-from 1_capture_screenshot import capture_catalog_screenshot
-from 2_vision_prompt_engine import generate_poster_prompt_from_vision
-from 3_generate_poster import render_branded_poster
-from 4_whatsapp_dispatcher import send_whatsapp_broadcast
+from capture_screenshot import capture_catalog_screenshot
+from vision_prompt_engine import generate_poster_prompt_from_vision
+from generate_poster import render_branded_poster
+from whatsapp_dispatcher import send_whatsapp_broadcast
 
 def execute_daily_pipeline(test_mode: bool = True):
     print("\n========================================================")
