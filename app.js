@@ -1,6 +1,6 @@
 // LUMIE JEWELS - SPA Core Logic and Product Catalog
 
-// 1. Product Catalog Database with Tanishq sub-brands and specifications
+// 1. Product Catalog Database with sub-brands and specifications
 const jewelryCatalog = [
   {
     id: "lj-001",
@@ -656,7 +656,7 @@ function renderProductGrid() {
     return;
   }
 
-  // Tanishq-style item card layout
+  // Item card layout
   gridContainer.innerHTML = filteredItems.map((item, index) => {
     return `
       <div class="product-card intersect" onclick="openDetailModal('${item.id}')" style="--delay: ${(index % 4) * 40}ms">
@@ -771,7 +771,7 @@ function selectCategory(categoryName) {
   }
 }
 
-// Tanishq Sub-Brand Occasion Trigger
+// Sub-Brand Occasion Trigger
 function selectSubBrand(brandName) {
   state.selectedSubBrand = brandName;
   
