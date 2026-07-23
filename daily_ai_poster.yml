@@ -42,6 +42,7 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           WHATSAPP_GROUP_ID: ${{ secrets.WHATSAPP_GROUP_ID }}
+          LUMIE_URL: ${{ secrets.LUMIE_URL }}
         run: |
           python ai_pipeline/main_scheduler.py
 
