@@ -17,7 +17,7 @@ WEBSITE_URL = os.getenv("LUMIE_URL", "http://localhost:8000")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "YOUR_GEMINI_API_KEY")
 
 # WhatsApp Broadcast Configuration
-WHATSAPP_GROUP_ID = os.getenv("WHATSAPP_GROUP_ID", "LUMIE_JEWELS_VIP")
+WHATSAPP_GROUP_ID = os.getenv("WHATSAPP_GROUP_ID", "LUMIE JEWELS Prime")
 
 # Schedule Time (24h IST)
 DAILY_SCHEDULE_TIME = "09:00"
