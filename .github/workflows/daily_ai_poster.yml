@@ -2,10 +2,8 @@ name: Daily AI Poster Generator & WhatsApp Broadcast
 
 on:
   schedule:
-    # Runs daily at 03:30 UTC (09:00 AM IST)
-    - cron: '30 3 * * *'
-  workflow_dispatch:
-    # Allows manual trigger from GitHub Actions tab
+    - cron: '30 3 * * *'    # Runs daily at 09:00 AM IST
+  workflow_dispatch:        # Allows manual trigger from GitHub Actions tab
 
 permissions:
   contents: write           # Grants permission to upload generated poster back to repo
@@ -15,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code with History
+      - name: Checkout Code
         uses: actions/checkout@v5
         with:
-          fetch-depth: 0    # Fetches full git commit history
+          fetch-depth: 0
 
       - name: Set up Python 3.12
         uses: actions/setup-python@v6
