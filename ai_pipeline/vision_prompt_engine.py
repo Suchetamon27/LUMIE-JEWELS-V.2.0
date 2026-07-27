@@ -9,13 +9,13 @@ if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
 from PIL import Image
-from google import genai
 from config import GEMINI_API_KEY, SCREENSHOT_PATH
 
 def generate_poster_prompt_from_vision(image_path: str = SCREENSHOT_PATH, api_key: str = GEMINI_API_KEY) -> str:
     print(f"[*] Analyzing snapshot ({image_path}) with Multimodal Vision AI...")
     
     try:
+        from google import genai
         client = genai.Client(api_key=api_key)
         image = Image.open(image_path)
         
@@ -31,7 +31,7 @@ def generate_poster_prompt_from_vision(image_path: str = SCREENSHOT_PATH, api_ke
         """
         
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-1.5-flash",
             contents=[image, vision_prompt]
         )
         
