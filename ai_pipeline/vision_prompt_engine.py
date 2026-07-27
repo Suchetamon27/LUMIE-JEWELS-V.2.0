@@ -4,7 +4,7 @@ Reads website screenshot, extracts catalog motifs, and outputs creative image pr
 """
 import sys
 
-# Ensure UTF-8 output encoding for Windows terminals
+# Ensure UTF-8 output encoding for terminals
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
@@ -43,10 +43,9 @@ def generate_poster_prompt_from_vision(image_path: str = SCREENSHOT_PATH, api_ke
         fallback_prompt = (
             "A high-end advertisement poster showcasing LUMIE JEWELS handcrafted Oxidised Silver Jhumkas "
             "and Temple Hasli choker. Dark royal burgundy velvet background with gold powder accents, "
-            "peacock engravings, 8k resolution studio photography."
+            "photorealistic studio lighting, 8k resolution."
         )
         return fallback_prompt
 
 if __name__ == "__main__":
-    prompt = generate_poster_prompt_from_vision()
-    print("Resulting Prompt:", prompt)
+    generate_poster_prompt_from_vision()
