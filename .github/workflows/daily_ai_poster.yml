@@ -8,15 +8,17 @@ on:
     # Allows manual trigger from GitHub Actions tab
 
 permissions:
-  contents: write  # Grants write permissions to auto-commit generated poster to GitHub repo
+  contents: write           # Grants permission to upload generated poster back to repo
 
 jobs:
   run-ai-pipeline:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout Code with History
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 0    # Fetches full git commit history
 
       - name: Set up Python 3.12
         uses: actions/setup-python@v6
