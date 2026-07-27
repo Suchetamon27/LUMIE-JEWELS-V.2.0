@@ -1,0 +1,58 @@
+name: Daily AI Poster Generator & WhatsApp Broadcast
+
+on:
+  schedule:
+    # Runs daily at 03:30 UTC (09:00 AM IST)
+    - cron: '30 3 * * *'
+  workflow_dispatch:
+    # Allows manual trigger from GitHub Actions tab
+
+permissions:
+  contents: write  # Grants write permissions to auto-commit generated poster to GitHub repo
+
+jobs:
+  run-ai-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v5
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install Python ML Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r ai_pipeline/requirements.txt
+
+      - name: Start Local Web Server
+        run: |
+          python serve.py &
+          sleep 3
+
+      - name: Execute Daily AI Pipeline Once
+        env:
+          PYTHONPATH: ai_pipeline
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          WHATSAPP_GROUP_ID: ${{ secrets.WHATSAPP_GROUP_ID }}
+          LUMIE_URL: ${{ secrets.LUMIE_URL }}
+        run: |
+          python ai_pipeline/main_scheduler.py --once
+
+      - name: Auto-Commit Generated Poster to GitHub Repo
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add ai_pipeline/output/daily_poster.jpg
+          git commit -m "chore: auto-update generated daily poster artwork [skip ci]" || true
+          git push
+
+      - name: Archive Generated Poster Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-marketing-poster
+          path: ai_pipeline/output/daily_poster.jpg
+          retention-days: 7
