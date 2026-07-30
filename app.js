@@ -1,7 +1,7 @@
 // LUMIE JEWELS - SPA Core Logic and Product Catalog
 
 // 1. Product Catalog Database with sub-brands and specifications
-const jewelryCatalog = [
+const jewelryCatalog = [ 
   {
     id: "lj-001",
     name: "Kundan Haar Rani Necklace",
